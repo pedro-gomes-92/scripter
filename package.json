@@ -12,7 +12,7 @@
     "url": "https://github.com/pedro-gomes-92/scripter.git"
   },
   "icon": "assets/images/vscode-icon.png",
-  "publisher": "pedrogomes",
+  "publisher": "pedrogomes92",
   "main": "./out/scripter.js",
   "activationEvents": [
     "*"
@@ -209,7 +209,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "publish": "vsce publish -p fyhwnklpxgc4cjaou2mqtyyy4pvzhsypqniklgzumicueml7sobq",
+    "publish": "node ./internals/publish.js",
     "lint": "npm run lint:ts",
     "lint:ts": "npx tslint \"src/**/*.ts\"",
     "prebuild": "npm run lint && npm run build:clean",
@@ -230,9 +230,11 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.3.1",
+    "vsce": "^1.71.0",
     "vscode": "^1.1.28"
   },
   "dependencies": {
+    "dotenv-flow": "^3.1.0",
     "fs-extra": "^7.0.1",
     "path": "^0.12.7",
     "terminate": "^2.1.2"

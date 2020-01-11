@@ -2,6 +2,7 @@
 .vscode-test/**
 out/test/**
 src/**
+variables/*.local
 .gitignore
 .prettierrc.js
 .editorconfig

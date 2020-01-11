@@ -1,0 +1,240 @@
+{
+  "name": "scripter",
+  "displayName": "Scripter",
+  "description": "Scripter for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedro-gomes-92/scripter.git"
+  },
+  "icon": "assets/images/vscode-icon.png",
+  "publisher": "pedrogomes",
+  "main": "./out/scripter.js",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "scripter.commands.open",
+        "title": "Open Manager"
+      },
+      {
+        "command": "scripter.commands.projects.refresh",
+        "title": "Refresh Projects",
+        "icon": {
+          "light": "assets/icons/light/refresh.svg",
+          "dark": "assets/icons/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.installAll",
+        "title": "Install Projects",
+        "icon": {
+          "light": "assets/icons/light/install.svg",
+          "dark": "assets/icons/dark/install.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.runAll",
+        "title": "Run Projects",
+        "icon": {
+          "light": "assets/icons/light/run.svg",
+          "dark": "assets/icons/dark/run.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.debugAll",
+        "title": "Debug Projects",
+        "icon": {
+          "light": "assets/icons/light/debug.svg",
+          "dark": "assets/icons/dark/debug.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.testAll",
+        "title": "Test Projects",
+        "icon": {
+          "light": "assets/icons/light/test.svg",
+          "dark": "assets/icons/dark/test.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.install",
+        "title": "Install Project",
+        "icon": {
+          "light": "assets/icons/light/install.svg",
+          "dark": "assets/icons/dark/install.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.run",
+        "title": "Run Project",
+        "icon": {
+          "light": "assets/icons/light/run.svg",
+          "dark": "assets/icons/dark/run.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.debug",
+        "title": "Debug Project",
+        "icon": {
+          "light": "assets/icons/light/debug.svg",
+          "dark": "assets/icons/dark/debug.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.projects.test",
+        "title": "Test Project",
+        "icon": {
+          "light": "assets/icons/light/test.svg",
+          "dark": "assets/icons/dark/test.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.processes.stop",
+        "title": "Stop Process",
+        "icon": {
+          "light": "assets/icons/light/stop.svg",
+          "dark": "assets/icons/dark/stop.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.processes.replay",
+        "title": "Replay Process",
+        "icon": {
+          "light": "assets/icons/light/replay.svg",
+          "dark": "assets/icons/dark/replay.svg"
+        }
+      },
+      {
+        "command": "scripter.commands.history.clear",
+        "title": "Clear History",
+        "icon": {
+          "light": "assets/icons/light/clear.svg",
+          "dark": "assets/icons/dark/clear.svg"
+        }
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "scripter-projects",
+          "title": "Scripter",
+          "icon": "assets/icons/terminal.svg"
+        }
+      ]
+    },
+    "views": {
+      "scripter-projects": [
+        {
+          "id": "scripter.views.projects",
+          "name": "Projects"
+        },
+        {
+          "id": "scripter.views.history",
+          "name": "History"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "scripter.commands.projects.installAll",
+          "when": "view == scripter.views.projects",
+          "group": "navigation@2"
+        },
+        {
+          "command": "scripter.commands.projects.runAll",
+          "when": "view == scripter.views.projects",
+          "group": "navigation@3"
+        },
+        {
+          "command": "scripter.commands.projects.debugAll",
+          "when": "view == scripter.views.projects"
+        },
+        {
+          "command": "scripter.commands.projects.testAll",
+          "when": "view == scripter.views.projects"
+        },
+        {
+          "command": "scripter.commands.history.clear",
+          "when": "view == scripter.views.history",
+          "group": "navigation"
+        },
+        {
+          "command": "scripter.commands.projects.refresh",
+          "when": "view == scripter.views.projects",
+          "group": "navigation@1"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "scripter.commands.projects.install",
+          "when": "view == scripter.views.projects && viewItem == project",
+          "group": "inline@1"
+        },
+        {
+          "command": "scripter.commands.projects.run",
+          "when": "view == scripter.views.projects && viewItem == project",
+          "group": "inline@2"
+        },
+        {
+          "command": "scripter.commands.projects.debug",
+          "when": "view == scripter.views.projects && viewItem == project",
+          "group": "inline@3"
+        },
+        {
+          "command": "scripter.commands.projects.test",
+          "when": "view == scripter.views.projects && viewItem == project",
+          "group": "inline@4"
+        },
+        {
+          "command": "scripter.commands.processes.stop",
+          "when": "view == scripter.views.projects && viewItem == process",
+          "group": "inline@1"
+        },
+        {
+          "command": "scripter.commands.processes.replay",
+          "when": "view == scripter.views.projects && viewItem == process",
+          "group": "inline@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "publish": "vsce publish -p fyhwnklpxgc4cjaou2mqtyyy4pvzhsypqniklgzumicueml7sobq",
+    "lint": "npm run lint:ts",
+    "lint:ts": "npx tslint \"src/**/*.ts\"",
+    "prebuild": "npm run lint && npm run build:clean",
+    "build": "npx tsc",
+    "build:clean": "npx rimraf ./out",
+    "build:watch": "npm run build -- -watch",
+    "pretest": "npm run build",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.5",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "npx": "^10.2.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "path": "^0.12.7",
+    "terminate": "^2.1.2"
+  }
+}

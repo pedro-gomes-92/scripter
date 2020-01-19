@@ -94,10 +94,16 @@ TOKEN=<YOUR_PERSONAL_ACCESS_TOKEN>
 
 ### Publish Project
 
-To start the project unit tests, just run the command
+To publish the project, just run the command
 
 ```
 npm run publish
+```
+
+Don't forget to bump the version beforehand, by running the command
+
+```
+npm version [path|minor|major]
 ```
 
 ## Built With

@@ -1,6 +1,6 @@
 import { ExtensionContext, window } from 'vscode';
 import * as genericCommands from './commands/generic';
-import { ProjectsView, HistoryView, BaseView } from './views';
+import { ProjectsView, BaseView } from './views';
 import { Command } from './utils';
 
 export const activate = (context: ExtensionContext) => {

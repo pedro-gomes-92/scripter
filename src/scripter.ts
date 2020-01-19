@@ -4,10 +4,10 @@ import { ProjectsView, HistoryView, BaseView } from './views';
 import { Command } from './utils';
 
 export const activate = (context: ExtensionContext) => {
-  const historyView = new HistoryView(context, 'scripter.views.history');
-  const projectsView = new ProjectsView(context, 'scripter.views.projects', [historyView]);
+  // const historyView = new HistoryView(context, 'scripter.views.history');
+  const projectsView = new ProjectsView(context, 'scripter.views.projects');
   registerView(projectsView);
-  registerView(historyView);
+  // registerView(historyView);
 
   Object.keys(genericCommands).forEach((name: string) => {
     Command.register(context, name, genericCommands[name]);

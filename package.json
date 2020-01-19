@@ -134,10 +134,6 @@
         {
           "id": "scripter.views.projects",
           "name": "Projects"
-        },
-        {
-          "id": "scripter.views.history",
-          "name": "History"
         }
       ]
     },
@@ -160,11 +156,6 @@
         {
           "command": "scripter.commands.projects.testAll",
           "when": "view == scripter.views.projects"
-        },
-        {
-          "command": "scripter.commands.history.clear",
-          "when": "view == scripter.views.history",
-          "group": "navigation"
         },
         {
           "command": "scripter.commands.projects.refresh",
@@ -197,11 +188,6 @@
           "command": "scripter.commands.processes.stop",
           "when": "view == scripter.views.projects && viewItem == process",
           "group": "inline@1"
-        },
-        {
-          "command": "scripter.commands.processes.replay",
-          "when": "view == scripter.views.projects && viewItem == process",
-          "group": "inline@2"
         }
       ]
     }

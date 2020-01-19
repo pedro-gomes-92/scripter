@@ -2,7 +2,7 @@
   "name": "scripter",
   "displayName": "Scripter",
   "description": "Scripter for VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.32.0"
   },

@@ -33,10 +33,10 @@ npm run build
 
 ### Run Project
 
-To start the project, just run the command
+To start the project, just open `debug` on the sidebar of the VSCode Editor and start
 
 ```
-npm start
+Run Extension (scripter)
 ```
 
 ### Run Tests

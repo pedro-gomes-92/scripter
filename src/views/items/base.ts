@@ -18,5 +18,5 @@ export class BaseItem extends TreeItem implements BaseItemProps {
     this.iconPath = iconPath;
   }
 
-  tooltip = `${this.label}${this.description ? `-${this.description}` : ''}`;
+  tooltip = `${this.label}${this.description ? ` - ${this.description}` : ''}`;
 }

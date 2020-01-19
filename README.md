@@ -7,6 +7,37 @@
 
 Scripter is a vscode extension, where the developer can apply shortcuts to easily execute custom commands. Includes the ability to see the progress of each command and act according to his needs (e.g. stop, repeat, run).
 
+## Usage
+
+To be able to recognize the shortcut commands on each project, you need to add the file `scripter.json` inside of your `.vscode` folder, with the following content
+
+```
+{
+  "label": "<PROJECT_NAME>",
+  "description": "<PROJECT_DESCRIPTION>",
+  "commands": {
+    "run": {
+      "title": "<COMMAND_NAME_RUN>",
+      "command": ["<SHELL_COMMANDS_RUN>"]
+    },
+    "test": {
+      "title": "<COMMAND_NAME_TEST>",
+      "command": ["<SHELL_COMMANDS_TEST>"]
+    },
+    "install": {
+      "title": "<COMMAND_NAME_INSTALL>",
+      "command": ["<SHELL_COMMANDS_INSTALL>"]
+    },
+    "debug": {
+      "title": "<COMMAND_NAME_DEBUG>",
+      "command": ["<SHELL_COMMANDS_DEBUG>"]
+    }
+  }
+}
+```
+
+Scripter will, then, register the configuration to the VSCode sidebar, so that you can start running the commands for the specific project.
+
 ## Getting Started
 
 Follow these instructions to run Scripter locally.

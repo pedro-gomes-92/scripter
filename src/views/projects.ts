@@ -39,17 +39,11 @@ export class ProjectsView extends BaseView<ProjectItem> {
 
   private getProject(path: string): ProjectItem {
     if (Path.exists(path)) {
-      const { label, icon, description, commands } = readJsonSync(path);
       const projectPath = Path.resolve(path, '../..');
-      return new ProjectItem(
-        this.context,
-        projectPath.replace(/.+\/(.+)$/g, '$1'),
-        label,
-        icon,
-        description,
-        projectPath,
-        commands,
-      );
+      const name = projectPath.replace(/.+\/(.+)$/g, '$1');
+
+      const { label = name, icon, description, commands } = readJsonSync(path);
+      return new ProjectItem(this.context, name, label, icon, description, projectPath, commands);
     }
   }
 

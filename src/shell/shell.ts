@@ -1,5 +1,4 @@
 import { Process } from './process';
-import { window } from 'vscode';
 
 interface Processes {
   [id: string]: Process;

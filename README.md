@@ -97,7 +97,7 @@ TOKEN=<YOUR_PERSONAL_ACCESS_TOKEN>
 To publish the project, just run the command
 
 ```
-npm run publish
+npm publish
 ```
 
 Don't forget to bump the version beforehand, by running the command

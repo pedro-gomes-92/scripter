@@ -1,7 +1,6 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/pedro-gomes-92/scripter)
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedro-gomes-92/scripter)
 ![GitHub Release Date](https://img.shields.io/github/release-date/pedro-gomes-92/scripter)
-![GitHub All Releases](https://img.shields.io/github/downloads/pedro-gomes-92/scripter/total)
 
 # Scripter
 

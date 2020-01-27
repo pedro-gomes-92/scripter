@@ -7,6 +7,14 @@ Scripter is a vscode extension, where the developer can apply shortcuts to easil
 
 ## Usage
 
+Follow these instructions to install Scripter and start using it.
+
+### Prerequisites
+
+Scripter only works with Visual Studio Code, so before using it, [download it](https://code.visualstudio.com/download). After that, just install Scripter from Visual Studio Marketplace, which you can do it from [here](https://marketplace.visualstudio.com/items?itemName=pedrogomes92.scripter).
+
+### Configuration
+
 To be able to recognize the shortcut commands on each project, you need to add the file `scripter.json` inside of your `.vscode` folder, with the following content
 
 ```
